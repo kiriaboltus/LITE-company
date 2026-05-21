@@ -63,14 +63,12 @@
 </head>
 <body class="overflow-x-hidden">
 
-    <!-- Кнопка Вверх -->
     <button id="back-to-top" class="bg-primary-blue text-white p-3 rounded-full shadow-2xl hover:bg-opacity-90 transition-all">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
 
-    <!-- Навигация -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
@@ -87,30 +85,38 @@
                     <a href="#contact" class="text-primary-blue border-b-2 border-primary-blue pb-1">Контакты</a>
                 </div>
                 <div class="md:hidden">
-                    <button id="menu-toggle" class="text-dark-custom">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <button id="menu-toggle" class="text-dark-custom focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 absolute left-0 right-0 top-20 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#about" class="block text-sm font-semibold uppercase tracking-widest hover:text-primary-blue transition-colors py-2">О нас</a>
+            <a href="#services" class="block text-sm font-semibold uppercase tracking-widest hover:text-primary-blue transition-colors py-2">Услуги</a>
+            <a href="#why-us" class="block text-sm font-semibold uppercase tracking-widest hover:text-primary-blue transition-colors py-2">Почему мы</a>
+            <a href="#contact" class="block text-sm font-semibold uppercase tracking-widest text-primary-blue py-2 border-b border-gray-100">Контакты</a>
+        </div>
     </nav>
 
-    <!-- Hero Section с эффектом стекла -->
     <section class="relative h-screen flex items-center hero-bg">
         <div class="absolute inset-0 glass-overlay"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl text-white">
-                <h1 class="text-5xl md:text-7xl mb-8 leading-tight">
+                <h1 class="text-3xl sm:text-5xl md:text-7xl mb-6 md:mb-8 leading-tight">
                     Ваша свобода <br><span class="text-primary-white">в правовом поле</span>
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light leading-relaxed">
+                <p class="text-base sm:text-lg md:text-2xl text-gray-200 mb-8 md:mb-10 font-light leading-relaxed">
                     Профессиональная юридическая помощь для тех, кто ценит время, репутацию и независимость. Мы берем сложности на себя.
                 </p>
-                <div class="flex flex-wrap gap-5">
-                    <a href="#contact" class="bg-primary-blue hover:scale-105 transition-transform px-10 py-5 rounded-sm font-bold uppercase tracking-widest text-sm shadow-xl">
+                <div class="flex flex-wrap gap-4 md:gap-5">
+                    <a href="#contact" class="bg-primary-blue hover:scale-105 transition-transform px-6 py-4 md:px-10 md:py-5 rounded-sm font-bold uppercase tracking-widest text-xs md:text-sm shadow-xl text-center w-full sm:w-auto">
                         Получить консультацию
                     </a>
-                    <a href="#services" class="backdrop-blur-md bg-white/10 border border-white/30 hover:bg-white/20 px-10 py-5 rounded-sm font-bold uppercase tracking-widest text-sm transition-all">
+                    <a href="#services" class="backdrop-blur-md bg-white/10 border border-white/30 hover:bg-white/20 px-6 py-4 md:px-10 md:py-5 rounded-sm font-bold uppercase tracking-widest text-xs md:text-sm transition-all text-center w-full sm:w-auto">
                         Наши направления
                     </a>
                 </div>
@@ -118,17 +124,16 @@
         </div>
     </section>
 
-    <!-- О нас -->
-    <section id="about" class="py-24">
+    <section id="about" class="py-16 md:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=800" alt="Юридическая команда" class="rounded-lg shadow-2xl relative z-10">
+            <div class="grid lg:grid-cols-2 gap-10 md:grid-cols-1 lg:gap-16 items-center">
+                <div class="relative order-2 lg:order-1">
+                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=800" alt="Юридическая команда" class="rounded-lg shadow-2xl relative z-10 w-full object-cover h-64 sm:h-96 lg:h-auto">
                     <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-primary-blue opacity-10 rounded-full blur-3xl"></div>
                 </div>
-                <div>
-                    <h2 class="text-4xl font-bold mb-8 text-dark-custom uppercase tracking-tight">Наш опыт — Ваш успех</h2>
-                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-dark-custom uppercase tracking-tight">Наш опыт — Ваш успех</h2>
+                    <div class="space-y-4 md:space-y-6 text-gray-600 text-base md:text-lg leading-relaxed">
                         <p>
                             В современном мире юридические вопросы могут возникнуть в любой момент. Ошибка в документах может привести к серьезным последствиям. Именно поэтому важно иметь рядом надежного партнера.
                         </p>
@@ -141,157 +146,147 @@
         </div>
     </section>
 
-    <!-- Услуги (Без уголовных дел) -->
-    <section id="services" class="py-24 bg-gray-50/50">
+    <section id="services" class="py-16 md:py-24 bg-gray-50/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Наши услуги</h2>
+            <div class="text-center mb-12 md:text-center md:mb-20">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Наши услуги</h2>
                 <div class="w-24 h-1 bg-primary-blue mx-auto"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Услуга 1 -->
-                <div class="service-card bg-white p-10 flex flex-col h-full">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="service-card bg-white p-8 md:p-10 flex flex-col h-full">
                     <div class="text-primary-blue mb-6">
                         <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Юридические консультации</h3>
-                    <p class="text-gray-500 mb-8 flex-grow">Подробные консультации по вопросам гражданского права. Оцениваем риски и строим стратегию защиты.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Юридические консультации</h3>
+                    <p class="text-gray-500 mb-6 md:mb-8 flex-grow text-sm md:text-base">Подробные консультации по вопросам гражданского права. Оцениваем риски и строим стратегию защиты.</p>
                 </div>
 
-                <!-- Услуга 2 -->
-                <div class="service-card bg-white p-10 flex flex-col h-full">
+                <div class="service-card bg-white p-8 md:p-10 flex flex-col h-full">
                     <div class="text-primary-blue mb-6">
                         <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Сопровождение бизнеса</h3>
-                    <p class="text-gray-500 mb-8 flex-grow">Комплексная правовая поддержка предпринимателей: от договоров до корпоративных сделок.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Сопровождение бизнеса</h3>
+                    <p class="text-gray-500 mb-6 md:mb-8 flex-grow text-sm md:text-base">Комплексная правовая поддержка предпринимателей: от договоров до корпоративных сделок.</p>
                 </div>
 
-                <!-- Услуга 3 -->
-                <div class="service-card bg-white p-10 flex flex-col h-full">
+                <div class="service-card bg-white p-8 md:p-10 flex flex-col h-full">
                     <div class="text-primary-blue mb-6">
                         <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Защита прав потребителей</h3>
-                    <p class="text-gray-500 mb-8 flex-grow">Помощь гражданам в спорах с продавцами и исполнителями услуг, возврат средств.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Защита прав потребителей</h3>
+                    <p class="text-gray-500 mb-6 md:mb-8 flex-grow text-sm md:text-base">Помощь гражданам в спорах с продавцами и исполнителями услуг, возврат средств.</p>
                 </div>
-        <!-- Услуга 4 -->
-                <div class="service-card bg-white p-10 flex flex-col h-full">
+
+                <div class="service-card bg-white p-8 md:p-10 flex flex-col h-full">
                     <div class="text-primary-blue mb-6">
                         <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Имущественные споры</h3>
-                    <p class="text-gray-500 mb-8 flex-grow">Разрешение конфликтов, связанных с недвижимостью, земельными участками и наследством.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Имущественные споры</h3>
+                    <p class="text-gray-500 mb-6 md:mb-8 flex-grow text-sm md:text-base">Разрешение конфликтов, связанных с недвижимостью, земельными участками и наследством.</p>
                 </div>
 
-                <!-- Услуга 5 -->
-                <div class="service-card bg-white p-10 flex flex-col h-full">
+                <div class="service-card bg-white p-8 md:p-10 flex flex-col h-full">
                     <div class="text-primary-blue mb-6">
                         <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 00-2 2z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Семейное право</h3>
-                    <p class="text-gray-500 mb-8 flex-grow">Урегулирование семейных вопросов, брачные контракты, раздел имущества и алименты.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Семейное право</h3>
+                    <p class="text-gray-500 mb-6 md:mb-8 flex-grow text-sm md:text-base">Урегулирование семейных вопросов, брачные контракты, раздел имущества и алименты.</p>
                 </div>
 
-                <!-- Услуга 6 -->
-                <div class="service-card bg-white p-10 flex flex-col h-full">
+                <div class="service-card bg-white p-8 md:p-10 flex flex-col h-full">
                     <div class="text-primary-blue mb-6">
                         <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Судебная практика</h3>
-                    <p class="text-gray-500 mb-8 flex-grow">Представительство в судах всех инстанций. Подготовка исков, жалоб и претензий.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Судебная практика</h3>
+                    <p class="text-gray-500 mb-6 md:mb-8 flex-grow text-sm md:text-base">Представительство в судах всех инстанций. Подготовка исков, жалоб и претензий.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Изображение разделитель -->
-    <div class="h-96 relative overflow-hidden">
+    <div class="h-64 md:h-96 relative overflow-hidden">
         <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1600" alt="Статуя правосудия" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-dark-custom/40"></div>
     </div>
 
-    <!-- Почему выбирают нас -->
-    <section id="why-us" class="py-24 bg-dark-custom text-white">
+    <section id="why-us" class="py-16 md:py-24 bg-dark-custom text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-20">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
                 <div>
-                    <h2 class="text-4xl font-bold mb-10">Почему клиенты <br>выбирают нас</h2>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-12">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-10">Почему клиенты <br>выбирают нас</h2>
+                    <p class="text-gray-400 text-base md:text-lg leading-relaxed mb-8 md:mb-12">
                         Мы предлагаем свободу от юридических проблем, обеспечивая прозрачность и результат в каждой ситуации.
                     </p>
-                    <div class="space-y-8">
-                        <div class="flex items-start gap-6">
-                            <div class="bg-primary-blue p-3 rounded-sm">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                    <div class="space-y-6 md:space-y-8">
+                        <div class="flex items-start gap-4 md:gap-6">
+                            <div class="bg-primary-blue p-3 rounded-sm shrink-0">
+                                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-xl mb-2">Полная конфиденциальность</h4>
-                                <p class="text-gray-500">Ваши данные и секреты под надежной защитой.</p>
+                                <h4 class="font-bold text-lg md:text-xl mb-1 md:border-none">Полная конфиденциальность</h4>
+                                <p class="text-gray-500 text-sm md:text-base">Ваши данные и секреты под надежной защитой.</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-6">
-                            <div class="bg-primary-blue p-3 rounded-sm">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                        <div class="flex items-start gap-4 md:gap-6">
+                            <div class="bg-primary-blue p-3 rounded-sm shrink-0">
+                                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-xl mb-2">Прозрачные условия</h4>
-                                <p class="text-gray-500">Никаких скрытых платежей. Честная оценка перспектив дела.</p>
+                                <h4 class="font-bold text-lg md:text-xl mb-1">Прозрачные условия</h4>
+                                <p class="text-gray-500 text-sm md:text-base">Никаких скрытых платежей. Честная оценка перспектив дела.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-primary-blue p-12 rounded-sm flex flex-col justify-center text-center">
-                    <h3 class="text-3xl font-bold mb-6 italic">«Мы защищаем право каждого быть свободным в своих решениях»</h3>
-                    <p class="text-white/70">Lite Company - команда экспертов</p>
+                <div class="bg-primary-blue p-8 md:p-12 rounded-sm flex flex-col justify-center text-center">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-6 italic">«Мы защищаем право каждого быть свободным в своих решениях»</h3>
+                    <p class="text-white/70 text-sm md:text-base">Lite Company - команда экспертов</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Контакты -->
-    <section id="contact" class="py-24">
+    <section id="contact" class="py-16 md:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-3 gap-12">
                 <div class="lg:col-span-1">
-                    <h2 class="text-4xl font-bold mb-8 text-dark-custom">Контакты</h2>
-                    <div class="space-y-8">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-dark-custom">Контакты</h2>
+                    <div class="space-y-6 md:space-y-8">
                         <div>
-                            <p class="text-sm uppercase tracking-widest text-primary-blue font-bold mb-2">Телефон</p>
-                            <a href="https://web.whatsapp.com/send?phone=77477809520&text=Здравствуйте" class="text-2xl font-light">+7 (747) 780 9520</a>
+                            <p class="text-xs uppercase tracking-widest text-primary-blue font-bold mb-2">Телефон</p>
+                            <a href="https://wa.me/77477809520" class="text-xl sm:text-2xl font-light hover:text-primary-blue transition-colors block break-all">+7 (747) 780 9520</a>
                         </div>
                         <div>
-                            <p class="text-sm uppercase tracking-widest text-primary-blue font-bold mb-2">Email</p>
-                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=XBcJlDLrhvjXfvNVmMpJTJFdlxDqxkNjQGKbmMLRlNZhfJMZHwwZVpPWqfBhjCWpqwWscRJZFrwdHrtv   " class="text-2xl font-light">ghost-a-@mail.ru</a>
+                            <p class="text-xs uppercase tracking-widest text-primary-blue font-bold mb-2">Email</p>
+                            <a href="mailto:ghost-a-@mail.ru" class="text-xl sm:text-2xl font-light hover:text-primary-blue transition-colors block break-all">ghost-a-@mail.ru</a>
                         </div>
                     </div>
                 </div>
-                <div class="lg:col-span-2 bg-white shadow-2xl p-10 md:p-16 border-t-8 border-primary-blue">
+                <div class="lg:col-span-2 bg-white shadow-2xl p-6 sm:p-10 md:p-16 border-t-8 border-primary-blue">
                     <form id="contact-form" class="space-y-6">
-    <div class="grid md:grid-cols-2 gap-6">
-        <input type="text" id="userName" placeholder="Ваше имя" required class="w-full bg-gray-50 border-none px-6 py-4 focus:ring-2 focus:ring-primary-blue outline-none">
-        <input type="tel" id="userPhone" placeholder="Телефон" required class="w-full bg-gray-50 border-none px-6 py-4 focus:ring-2 focus:ring-primary-blue outline-none">
-    </div>
-    <textarea id="userMessage" rows="4" placeholder="Чем мы можем вам помочь?" class="w-full bg-gray-50 border-none px-6 py-4 focus:ring-2 focus:ring-primary-blue outline-none"></textarea>
-    
-    <button type="submit" class="bg-dark-custom text-white w-full py-5 font uppercase tracking-widest hover:bg-opacity-90 transition-all shadow-lg">
-        Запросить бесплатный звонок
-    </button>
-    <p id="success-msg" class="hidden text-center text-primary-blue font-bold">Заявка успешно отправлена!</p>
-</form>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="text" id="userName" placeholder="Ваше имя" required class="w-full bg-gray-50 border-none px-6 py-4 focus:ring-2 focus:ring-primary-blue outline-none text-sm md:text-base">
+                            <input type="tel" id="userPhone" placeholder="Телефон" required class="w-full bg-gray-50 border-none px-6 py-4 focus:ring-2 focus:ring-primary-blue outline-none text-sm md:text-base">
+                        </div>
+                        <textarea id="userMessage" rows="4" placeholder="Чем мы можем вам помочь?" class="w-full bg-gray-50 border-none px-6 py-4 focus:ring-2 focus:ring-primary-blue outline-none text-sm md:text-base"></textarea>
+                        
+                        <button type="submit" class="bg-dark-custom text-white w-full py-4 md:py-5 font-bold uppercase tracking-widest hover:bg-opacity-90 transition-all shadow-lg text-xs md:text-sm">
+                            Запросить бесплатный звонок
+                        </button>
+                        <p id="success-msg" class="hidden text-center text-primary-blue font-bold">Заявка успешно отправлена!</p>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Футер -->
     <footer class="bg-dark-custom text-white py-12 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
             <span class="text-2xl font-bold tracking-tighter">
                 <span class="text-primary-blue">LITE</span> CORP
             </span>
-            <p class="text-gray-500 text-sm">© 2020 Юридическая фирма «Lite Corp». Свобода под защитой закона.</p>
+            <p class="text-gray-500 text-xs md:text-sm">© 2020 Юридическая фирма «Lite Corp». Свобода под защитой закона.</p>
         </div>
     </footer>
 
@@ -309,48 +304,61 @@
             window.scrollTo({top: 0, behavior: 'smooth'});
         };
 
-        // Мобильное меню (упрощенное)
+        // Логика мобильного меню
         const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        // Иконки "гамбургер" и "крестик"
+        const hamburgerSvg = "M4 6h16M4 12h16m-7 6h7";
+        const closeSvg = "M6 18L18 6M6 6l12 12";
+
         menuToggle.onclick = function() {
-            
-            alert("Навигация доступна через скролл.");
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            if (!isHidden) {
+                menuIcon.setAttribute('d', closeSvg);
+            } else {
+                menuIcon.setAttribute('d', hamburgerSvg);
+            }
         };
 
-        // Обработка формы
-const contactForm = document.getElementById('contact-form');
-const successMsg = document.getElementById('success-msg');
+        // Автоматическое скрытие меню при клике на любую ссылку в мобильном меню
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.onclick = function() {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('d', hamburgerSvg);
+            };
+        });
 
-contactForm.onsubmit = function(e) {
-    e.preventDefault();
+        // Обработка формы (Отправка в WhatsApp)
+        const contactForm = document.getElementById('contact-form');
+        const successMsg = document.getElementById('success-msg');
 
-    // 1. Собираем данные из полей по ID
-    const name = document.getElementById('userName').value;
-    const phone = document.getElementById('userPhone').value;
-    const message = document.getElementById('userMessage').value;
+        contactForm.onsubmit = function(e) {
+            e.preventDefault();
 
-    // 2. Формируем текст сообщения
-    const whatsappText = `Новая заявка!%0A` +
-                         `*Имя:* ${encodeURIComponent(name)}%0A` +
-                         `*Телефон:* ${encodeURIComponent(phone)}%0A` +
-                         `*Вопрос:* ${encodeURIComponent(message)}`;
+            const name = document.getElementById('userName').value;
+            const phone = document.getElementById('userPhone').value;
+            const message = document.getElementById('userMessage').value;
 
-    // 3. номер
-    const myNumber = "77477809520"; 
+            const whatsappText = `Новая заявка!%0A` +
+                                 `*Имя:* ${encodeURIComponent(name)}%0A` +
+                                 `*Телефон:* ${encodeURIComponent(phone)}%0A` +
+                                 `*Вопрос:* ${encodeURIComponent(message)}`;
 
-    // 4. Формируем
-    const whatsappUrl = `https://wa.me/${myNumber}?text=${whatsappText}`;
-    
-    // Открываем WhatsApp
-    window.open(whatsappUrl, '_blank');
+            const myNumber = "77477809520"; 
+            const whatsappUrl = `https://wa.me/${myNumber}?text=${whatsappText}`;
+            
+            window.open(whatsappUrl, '_blank');
 
-    // Показываем уведомление об успехе
-    successMsg.classList.remove('hidden');
-    contactForm.reset();
-    
-    setTimeout(() => { 
-        successMsg.classList.add('hidden'); 
-    }, 3000);
-};
+            successMsg.classList.remove('hidden');
+            contactForm.reset();
+            
+            setTimeout(() => { 
+                successMsg.classList.add('hidden'); 
+            }, 3000);
+        };
     </script>
 </body>
 </html>
